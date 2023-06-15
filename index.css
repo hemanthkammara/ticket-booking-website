@@ -1,0 +1,354 @@
+*{
+    box-sizing: border-box;
+    margin:0%;
+    padding: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/* navbar CSS */
+
+
+.discountbar{
+    width: 100%;
+    background-color: rgb(47, 131, 227);
+    text-align: center;
+    color: white;
+    height: 25px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    margin: auto;
+}
+
+ .navbaratag{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+ }
+
+ .logo{
+    width: 15%;
+ }
+
+ .logo img{
+    width: 80%;
+    height: 50px;
+   
+ }
+ .nav-con{
+    background-image: url('./images/pexels-edited.jpeg');
+    height: 400px;
+ }
+
+ /* content section */
+
+ .content{
+    display: flex;
+    width: 100%;
+ }
+ .left-con{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+ }
+ .left-con div:nth-child(1){
+   
+    border-radius: 100px;
+ }
+ .left-con div:nth-child(2){
+   
+    border-radius: 100px;  
+ }
+ .img1 img{
+    width: 60%;
+    border-radius: 100px;
+ }
+ .img2 img{
+    width: 60%;
+    border-radius: 100px;
+ }
+
+ .right-con{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ }
+ 
+ .right-con button{
+    width: 18%;
+    border-radius: 15px;
+    height: 25px;
+    background-color:rgb(15, 192, 232);
+    color: white;
+ }
+ .right-con h1{
+    margin-bottom: 15px;
+ }
+
+ .right-con h5{
+   margin-bottom: 15px;
+   color: white;
+   font-size: 15px;
+ }
+/* booking section CSS */
+
+ .booking{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    border: 0.5px solid black;
+    justify-content: space-around;
+    height: 60px;
+    align-items: center;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   
+ }
+
+ .peoplediv,.locationdiv{
+    width: 25%;
+    border: 0.5px solid red;
+     }
+
+ .bookingadd{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 19%;
+    padding-left: 3%;
+  
+  }
+  
+  .peopleadd{
+    width: 25%;
+      opacity: 0;
+        flex-direction: column;
+        border: 0.5px solid green;
+        align-content: center;
+       text-align: center; 
+       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+       margin: 7px;
+       height: 70px;
+     
+ }
+   
+ .peopleadd.active {
+         opacity: 1;
+         
+        
+     }
+     
+ .locationadd{
+     width: 30%;
+     display: flex;
+     flex-direction: column;
+     border: 0.5px solid yellow;
+   opacity: 0;
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+     margin: 7px;
+   
+ }
+
+ .locationadd.active{
+ opacity: 1;
+ 
+}
+ 
+ .spanshow{
+    color: rgb(117, 111, 111);
+ }
+ #category{
+    width: 25%;
+ }
+ .book{
+    width: 25%;
+    height: 60px;
+    border-radius: 10px;
+ }
+ /* offer section */
+
+ .offer-section{
+   width: 80%;
+   margin: auto;
+ }
+ .offer-heading{
+   width:100%;
+   text-align: center;
+   margin-top: 25px;
+ }
+ .offer-heading h5{
+   margin-top: 25px;
+   margin-bottom: 25px;
+   color: rgb(65, 62, 62);
+ }
+
+
+ .offer-grid{
+   margin: auto;
+   width: 90%;
+   display: grid;
+   gap: 25px;
+   grid-template-columns: repeat(3,1fr);
+ }
+ .offer-grid>div{
+   border-radius: 15px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 20px;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   margin: auto;
+ }
+ .offer-grid p{
+   margin-top: 15px;
+   margin-bottom: 15px;
+
+ }
+ .offer-grid h3{
+   margin-top: 15px;
+  color: rgb(125, 125, 240);
+ }
+ .icon-style{
+   width: 25%;
+   height: 65px;
+   border-radius: 100%;
+   color: white;
+   background-color: blue;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: 30px;
+   margin-bottom: 15px;
+ }
+ .fa-solid{
+   font-size: 25px;  
+ }
+ /* world section */
+
+ .worldsection{
+   width: 100%;
+   text-align: center;
+ }
+ .worldsection h1{
+   margin-top: 30px;
+   margin-bottom: 15px;
+ }
+ .worldsection p{
+   margin-top: 10px;
+   margin-bottom: 35px;
+   font-weight: 500;
+ }
+ .worldsection img{
+   width: 100%;
+   height: 250px;
+ }
+ /* popular destination css */
+
+ .popular-destination{
+   width: 80%;
+   margin: auto;
+   
+ }
+ .popular-destination h1:nth-child(1){
+   text-align: center;
+   margin-top: 40px;
+   margin-bottom: 30px;
+   
+ }
+ .popular-destination p:nth-child(2){
+   text-align: center;
+   margin-bottom: 25px;
+ }
+.destination-grid{
+   width: 90%;
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+   gap: 25px;
+   margin: auto;
+ 
+
+}
+.destination-grid>div{
+
+ border-radius: 15px;
+ box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.destination-grid img{
+   width: 100%;
+   border-radius: 15px;
+}
+.destination-grid>div>p:nth-child(3){
+color: rgb(127, 122, 122);
+text-align: center;
+}
+.destination-grid>div>h3:nth-child(2){
+   text-align: center;
+}
+.inner-dis-div{
+ 
+   display: flex;
+   margin-bottom: 15px;
+}
+.inner-dis-div div{
+   width: 50%;
+}
+.inner-dis-div div:nth-child(1){
+padding-left: 13px;
+}
+.inner-dis-div div:nth-child(1)>p{
+  color: rgb(35, 31, 31);
+  margin-bottom: 5px;
+   }
+.inner-dis-div div:nth-child(1)>h4{
+   color: rgb(17, 17, 17);
+   
+      }
+.inner-dis-div div:nth-child(2){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.inner-dis-div div:nth-child(2)>button{
+   width: 70%;
+   background-color: rgb(79, 205, 224);
+   color: white;
+   height: 30px;
+  border-radius: 15px;
+  border: none;
+  font-size: 15px;
+ 
+}
+
+
+.destination-grid div>h3{
+   margin-top: 10px;
+}
+.destination-grid div>p{
+   margin-top: 7px;
+}
+
+
+/* get in touch himalays */
+.get-in-touch{
+   width: 100%;
+   margin-top: 40px
+}
+.get-in-touch img{
+   width: 100%;
+   height: 300px;
+}
+

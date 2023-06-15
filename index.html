@@ -4,63 +4,351 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        *{
-            box-sizing: border-box;
-            margin:0%;
-            padding: 0%;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        .discountbar{
-            width: 100%;
-            background-color: rgb(47, 131, 227);
-            text-align: center;
-            color: white;
-            height: 25px;
-        }
-        a{
-            text-decoration: none;
-        }
-        .navbar{
-            display: flex;
-            justify-content: space-between;
-            width: 95%;
-            margin: auto;
-        }
-         .navbaratag{
-            width: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-         }
-         .logo{
-            width: 15%;
-         }
-         .logo img{
-            width: 80%;
-            height: 50px;
-           
-         }
-
-    </style>
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://kit.fontawesome.com/d245f5ac5f.js" crossorigin="anonymous"></script>
+ 
 </head>
 <body>
 
     <div class="discountbar">
         <p>upto 50% off on your trips</p>
     </div>
-    <div class="navbar">
-        <div class="logo">
-            <img src="./images/logo.png" alt="">
+
+    <div class="nav-con">
+        <div class="navbar">
+            <div class="logo">
+                <img src="./images/logo1-removebg-preview.png" alt="">
+            </div>
+            <div class="navbaratag">
+                <a href="">Home</a>
+                <a href="">About Us</a>
+                <a href="">Hotels</a>
+                <a href="">Flights</a>
+                <a href="">Holidays</a>
+                <a href="">Contact us</a>
+            </div>
         </div>
-        <div class="navbaratag">
-            <a href="">Home</a>
-            <a href="">About Us</a>
-            <a href="">Hotels</a>
-            <a href="">Flights</a>
-            <a href="">Holidays</a>
-            <a href="">Contact us</a>
+
+        <div class="content">
+
+            <div class="left-con">
+                <div class="img1">
+                    <img src="./images/desert-image-edited.jpg" alt="">
+                </div>
+                <div class="img2">
+                    <img src="./images/travel maldives.jpg" alt="">
+                </div>
+
+            </div>
+
+
+            <div class="right-con">
+                <h1>Explore the beauty of <br> journey</h1>
+                <h5>join our community of travel enthusiats and discover new places,<br>
+                      meet new people,and make lasting memories.Book with us and <br>
+                       experience the world like never before</h5>
+               <button>Learn more</button>
+            
+             </div>
         </div>
     </div>
+
+
+
+    
+    <!-- booking section location,category,people,book HTML-->
+    <div class="booking">
+
+
+        <div class="locationdiv">
+            <span class="spanshow">location</span>
+            <p class="locationdis fromLocation"></p>
+            <p class="locationdis toLocation"></p>
+        </div>
+      
+        <select name="" id="category">
+            <option value="">category</option>
+            <option value="economy">Economy</option>
+            <option value="business">Business</option>
+        </select>
+                
+        <div class="peoplediv">
+            <span class="spanshow">people</span>
+            <p class="peopledis"></p>
+        </div>
+            
+        <button class="book">book</button>
+        
+    </div>
+
+
+<!-- adding data to the booking section  HTML-->
+
+    <div class="bookingadd">
+        <div class="locationadd">
+            <form action="" id="locationsubmit">
+                <label for="">Onboarding</label>
+                <input type="text" id="dataFrom" placeholder="enter">
+                <label for="">Destination</label>
+                <input type="text" id="dataTo" placeholder="enter">
+                <button>OK</button>
+            </form>
+
+
+        </div>
+
+        <div class="peopleadd">
+            <div>
+                <span>Adults:</span>
+                <button id="minusad">-</button>
+                <span class="adcount">1</span>
+                <button id="plusad">+</button>
+            </div>
+            <div>
+                <span>child:</span>
+                <button id="minuscd">-</button>
+                <span class="cdcount">0</span>
+                <button id="pluscd">+</button>
+            </div>
+        </div>
+
+    </div>
+       
+        <div class="offer-section">
+            <div class="offer-heading">
+                <h1>We Offer the Best</h1>
+                <h5>Our team of travel experts is dedicated to ensuring that you have the vacation of a lifetime.Choose us 
+                    for your next <br> adventure and see why we're the best in the business.
+                </h5>
+            </div>
+            <div class="offer-grid">
+                <div>
+                    <div class="icon-style">
+
+                        <i class="fa fa-thin fa-plane"></i>
+                    </div>
+                    <h3>International Tours</h3>
+                    <p>Explore the world like never before with our international tours.Discover new cultures.meet new people.and 
+                        create memories that will last a lifetime.</p>
+                </div>
+                <div>
+                    <div class="icon-style">
+
+                        <i class="fa-solid fa-user-group"></i>
+                    </div>
+                    <h3>Travel Community</h3>
+    
+                    <p>join our travel community and connect with like-minded travelers
+                        from around the world .Share tips,stories and advice on your next adventure.
+                    </p>
+                </div>
+                <div>
+                    <div class="icon-style">
+
+                        <i class="fa-solid fa-percent"></i>
+                    </div>
+                    <h3>Great Offers</h3>
+                    <p>Don't miss out on our exclusive discounts and deals
+                        on flights,hotels, and vacation packages.Save big and travel more 
+                        with our special offers 
+                    </p>
+
+                </div>
+            </div>
+
+            <i class="fa-sharp fa-light fa-plane-engines"></i>
+        </div>
+        
+       <!-- world section -->
+<div class="worldsection">
+    <h1>Great locations across the World</h1>
+    <p>Travel to the breathtaking and exatic locations across the globe
+        with us.From the majestic mountains of <br> Patagania to the pristine beaches of Bali ,
+         We'll take you there.
+    </p>
+    <img src="./images/world-map-project.jpg" alt="">
+</div>
+  
+<!-- popular destination  -->
+<div class="popular-destination">
+    <h1>Find Popular Destinations</h1>
+    <p>Escape the ordinary and explore the extradinory -with our handpicked selection of destinations and travel deals, <br>
+    you'll be able to create the trip of your dreams.</p>
+
+    <div class="destination-grid">
+        <div>
+            <img src="./images/maldives-destination-edited.jpg" alt="">
+            <h3>Magical Maldives</h3>
+            <p>7N/8D</p>
+            <div class="inner-dis-div">
+                <div>
+                    <p>Starts from</p>
+                    <h4>$220 / person</h4>
+                </div>
+                <div>
+
+                    <button>Book</button>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <img src="./images/dubai-destination.jpg" alt="">
+            <h3>Dazzling Dubai</h3>
+            <p>7N/8D</p>
+            <div class="inner-dis-div">
+                <div>
+                    <p>Starts from</p>
+                    <h4>$220 / person</h4>
+                </div>
+                <div>
+
+                    <button>Book</button>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <img src="./images/rajsthan-camel-edited.jpeg" alt="">
+            <h3>Royal Rajasthan</h3>
+            <p>7N/8D</p>
+            <div class="inner-dis-div">
+                <div>
+                    <p>Starts from</p>
+                    <h4>$220 / person</h4>
+                </div>
+                <div>
+                    <button >Book</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+<div class="get-in-touch">
+    <img src="./images/himalays-editedfinal-removebg-preview.png" alt="">
+</div>
+
+
+       
+
+         
+       
+    
+
+
 </body>
 </html>
+<script>
+
+// booking section classes,ids
+let locationdiv=document.querySelector(".locationdiv");
+let locationadd=document.querySelector(".locationadd");
+let fromlocationdis=document.querySelector(".fromLocation");
+ let toLocationdis=document.querySelector(".toLocation");
+ let locationsubmit=document.querySelector("#locationsubmit")
+let fromdata=document.querySelector("#dataFrom");
+let todata=document.querySelector("#dataTo");
+
+ locationsubmit.addEventListener("submit",function(e){
+    event.preventDefault(e);
+    fromlocationdis.innerHTML="Onboarding:"+fromdata.value;
+    toLocationdis.innerHTML="destination:"+todata.value;
+
+    console.log("hiii")
+ })
+
+
+locationdiv.addEventListener("click",function(){
+   locationadd.classList.toggle("active")
+})
+
+let peoplediv=document.querySelector(".peoplediv");
+let peopleadd=document.querySelector(".peopleadd");
+let peopledis=document.querySelector(".peopledis");
+
+let adcount=document.querySelector(".adcount");
+let cdcount=document.querySelector(".cdcount");
+let booking=document.querySelector(".booking");
+
+
+// adding people for booking flight
+
+let adult=1;
+let child=0;
+
+let plusad=document.querySelector("#plusad");
+let pluscd=document.querySelector("#pluscd");
+
+let minusad=document.querySelector("#minusad");
+let minuscd=document.querySelector("#minuscd");
+
+
+// active peopleadd to display when click on peoplediv
+peoplediv.addEventListener("click",function(){
+    peopleadd.classList.toggle("active");
+})
+
+
+
+
+// increse count of adult and child
+
+// adult increase
+plusad.addEventListener("click",function(){
+    adult++;
+        if(child==0){
+            peopledis.innerHTML="Adult:"+adult;
+        }
+        else{
+            peopledis.innerHTML="Adult:"+adult+","+"child:"+child;
+        }
+    adcount.innerHTML=adult
+})
+
+// child increase
+pluscd.addEventListener("click",function(){
+    child++;
+    peopledis.innerHTML="Adult:"+adult+","+"child:"+child;
+    cdcount.innerHTML=child;
+
+})
+
+
+
+
+
+// decreaseing the count of adult and child
+    
+
+// adult decrease count
+minusad.addEventListener("click",function(){
+    if(adult!=1){
+        adult--;
+        if(child==0){
+            peopledis.innerHTML="Adult:"+adult;
+            }
+        else{
+            peopledis.innerHTML="Adult:"+adult+","+"child:"+child;
+            }
+        adcount.innerHTML=adult
+    }
+})
+
+// child decrease count
+minuscd.addEventListener("click",function(){
+    if(child!=0){
+        child--;
+        peopledis.innerHTML="Adult:"+adult+","+"child:"+child;
+        cdcount.innerHTML=child;
+    }
+})
+
+
+
+
+
+
+</script>
