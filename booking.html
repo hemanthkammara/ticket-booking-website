@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Here is an example of HTML code for a flight ticket: -->
+
+    <head>
+        <title>Flight Ticket</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                line-height: 1.5;
+            }
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+            th, td {
+                text-align: left;
+                padding: 8px;
+                border-bottom: 1px solid #ddd;
+            }
+            th {
+                background-color: #f2f2f2;
+            }
+            h1 {
+                font-size: 24px;
+                margin-top: 0;
+            }
+            .ticket-display{
+                display: none;
+              }
+              .ticket-display.active{
+                display: block;
+              }
+              .details-form{
+                display: flex;
+                flex-direction: column;
+              }
+        </style>
+    </head>
+    <body>
+        <a href="./index.html">back</a>
+        <div class="detail-form">
+            <div>
+
+                
+                <input type="text" placeholder="enter name" id="person-name-enter">
+                <label for="">Person Namee</label>
+            </div>
+   
+            <div>
+
+                <input type="date" id="date-depature">
+                <label for="">travel date</label>
+            </div>
+            <div>
+
+                <select name="" id="time-depature">
+                    <option value="9:00">9:00</option>
+                    <option value="11:00">11:00</option>
+                    <option value="13:00">13:00</option>
+                    <option value="16:00">16:00</option>
+                    <option value="19:00">19:00</option>
+                    <option value="20:00">20:00</option>
+                    <option value="23:00">23:00</option>
+                </select>
+                <label for="">timing</label>
+            </div>
+    
+            <div>
+
+                <button class="generate-btn">generate ticket</button>
+            </div>
+        </div>
+
+
+
+        <div class="ticket-display">
+
+            <h1>Flight Ticket</h1>
+            <table>
+                <tr>
+                    <th>Passenger Name</th>
+                    <td class="person-name"></td>
+                </tr>
+                <tr>
+                    <th>Flight Number</th>
+                    <td>ABC123</td>
+                </tr>
+                <tr>
+                    <th>Departure Date and Time</th>
+                    <td class="depature-time-date"></td>
+                </tr>
+                <tr>
+                    <th>Departure Airport</th>
+                    <td class="from-airp"></td>
+                </tr>
+                <tr>
+                    <th>Arrival Airport</th>
+                    <td class="to-airp"></td>
+                </tr>
+                <tr>
+                    <th>Seat Number</th>
+                    <td class="seat-number">12A</td>
+                </tr>
+                <tr>
+                    <th>Price</th>
+                    <td class="Price"></td>
+                </tr>
+        
+            </table>
+                 <p><strong>Note:Adhar cards for all people is mandatory</strong></p>
+            <p><strong>Note:</strong> Please arrive at the airport at least two hours before your scheduled departure time.</p>
+        </div>
+    
+    </body>
+    
+    </html>
+   
+    
+</html>
+<script>
+   let bookprice=[
+    {from:"mumbai",
+    to:"delhi",
+    fromAirName:"Mumbai:Chhatrapati Shivaji Maharaj International Airport",
+    toAirPortName:"Delhi: Indira Gandhi International Airport ",
+    adultPrice:3000,
+    child:1500},
+   
+    {from:"delhi",
+    to:"mumbai",
+    fromAirName:"Delhi: Indira Gandhi International Airport ",
+    toAirPortName:"Mumbai:Chhatrapati Shivaji Maharaj International Airport",
+    adultPrice:3000,
+    child:1500},
+
+    {from:"Hyderabad",
+    to:"delhi",
+    fromAirName:"Hyderabad: Rajiv Gandhi International Airport",
+    toAirPortName:"Delhi: Indira Gandhi International Airport ",
+    adultPrice:7000,
+    child:4000},
+
+    {from:"Hyderabad",
+    to:"Bangalore",
+    fromAirName:"Hyderabad: Rajiv Gandhi International Airport",
+    toAirPortName:"Bangalore: Kempegowda International Airport ",
+    adultPrice:2500,
+    child:900}
+
+
+]
+
+let personName=document.querySelector(".person-name");
+let depatureTime=document.querySelector(".depature-time-date");
+let fromAir=document.querySelector(".from-airp");
+let toAir=document.querySelector(".to-airp");
+let price=document.querySelector(".Price");
+
+let ticketDisplay=document.querySelector(".ticket-display");
+
+let generateTicBtn=document.querySelector(".generate-btn")
+
+let personEnterName=document.querySelector("#person-name-enter");
+let dateDepatureEnter=document.querySelector("#date-depature");
+let timeDepatureEnter=document.querySelector("#time-depature");
+
+let bookls=localStorage.getItem("bookdata");
+let bookarr=[];
+if(bookls==null){
+    bookarr=[]
+}
+else{
+    bookarr=JSON.parse(bookls)
+}
+
+let recentData=[]
+ recentData.push(bookarr[bookarr.length-1]);
+
+console.log(recentData);
+// console.log(bookprice[0].from)
+console.log(recentData[recentData.length-1].from)
+if(bookprice[0].from==recentData[recentData.length-1].from){
+    console.log('hemanth')
+}
+
+let flightData=[];
+
+function checkdata(){
+ flightData=bookprice.filter(function(element,i){
+     console.log(element.from,element.to);
+     
+     if(element.from.toUpperCase().includes(recentData[recentData.length-1].from.toUpperCase()) && element.to.toUpperCase().includes(recentData[recentData.length-1].to.toUpperCase())){
+        console.log("got it")
+        //  flightData.push(element)
+         return element
+     }
+})
+   }
+
+
+    
+console.log(flightData)
+
+generateTicBtn.addEventListener("click",function(){
+    ticketDisplay.classList.toggle("active");
+ depatureTime.innerHTML=dateDepatureEnter.value+","+timeDepatureEnter.value;
+ personName.innerHTML=personEnterName.value;
+ 
+ checkdata()
+console.log(flightData)
+flightData[flightData.length-1]
+fromAir.innerHTML=flightData[flightData.length-1].fromAirName;
+toAir.innerHTML=flightData[flightData.length-1].toAirPortName;
+
+let adultPrice = +(recentData[recentData.length-1].adult) * (+(flightData[flightData.length-1].adultPrice));
+let childprice = +(recentData[recentData.length-1].child) * (+(flightData[flightData.length-1].child));
+console.log((adultPrice),childprice)
+price.innerHTML= adultPrice + childprice
+})
+
+
+
+
+</script>
