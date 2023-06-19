@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Here is an example of HTML code for a flight ticket: -->
+
+    <head>
+        <title>Flight Ticket</title>
+        <link rel="stylesheet" href="./booking.css">
+        <script src="https://kit.fontawesome.com/d245f5ac5f.js" crossorigin="anonymous"></script>
+       
+    </head>
+    <body>
+      
+
+
+
+        <div class="navbar">
+            <div class="logo">
+                <img src="./images/logo1-removebg-preview.png" alt="">
+            </div>
+            <div class="navbaratag">
+                <a href="./index.html">Home</a>
+                <a href="./aboutus.html">About Us</a>
+                <a href="">Hotels</a>
+                <a href="">Flights</a>
+                <a href="">Holidays</a>
+                <a href="">Contact us</a>
+            </div>
+        </div>
+
+
+
+            <div class="travel-quote">
+
+                <h1>“Travel far enough, you meet yourself.”</h1>
+                <h1>― David Mitchell_<i class="fa-solid fa-pencil"></i></h1>
+                   
+            </div>
+
+       <div class="ticket-count-show">
+        <h1 class="ticket-count-text"></h1>
+       </div>
+
+
+
+
+        
+        <!-- detailsform   and   sponsers side by side  -->
+        <div class="spon-detail">
+            
+            
+              
+              
+              <div class="detail-form">
+
+                <div class="logo-detail">
+                    <img src="./images/logo1-removebg-preview.png" alt="">
+                </div>
+                           
+                  <div><h2> Contine Booking...</h2></div>
+                        <div>
+                              <label for="">Person Name</label>
+                              <input type="text" placeholder="enter name" id="person-name-enter">
+                        
+                          </div>
+
+                          <div>
+                            <label for="">Phone Number</label>
+                            <input type="number" placeholder="Enter Number">
+                            
+                          </div>
+
+
+
+                         <div>
+                             <label for="">travel date</label>
+                             <input type="date" id="date-depature">
+                           
+                         </div>
+                              
+                         <div>
+              
+                             <label for="">timing</label>
+                             <select name="" id="time-depature">
+                                <option value="">select</option>
+                                 <option value="9:00">9:00</option>
+                                 <option value="11:00">11:00</option>
+                                 <option value="13:00">13:00</option>
+                                 <option value="16:00">16:00</option>
+                                 <option value="19:00">19:00</option>
+                                 <option value="20:00">20:00</option>
+                                 <option value="23:00">23:00</option>
+                             </select>
+                           
+                         </div>
+                         <div>
+              
+                             <button class="generate-btn nextprocess">Next</button>
+                         </div>
+                        
+                      </div>
+
+
+                      <div class="sponsers">
+                        <div class="air-india-spon">
+                            <p>partner's</p>
+                            <img src="https://flyingreturns.blob.core.windows.net/root/src/images/logo.svg" alt="">
+                        </div>
+                        <div class="taj-holidays">
+                          
+                            <img src="https://www.tajhotels.com/content/dam/tajhotels/icons/style-icons/logo--Taj.png" alt="">
+                        </div>
+                      </div>
+
+    </div>
+
+<!-- create total price box and  upi payment -->
+
+
+<div class="show-total-pay-next">
+
+    <div class="show-total-top">
+        <div>
+            <h1>Hii  </h1>
+        
+            <h3 class="show-total-pay-name"></h3>
+        </div>
+    </div>
+
+    <div class="show-total-mid">
+        <div class="show-pay-via">
+           
+
+                <h1>Payment</h1>
+           
+            <p>via</p>
+        </div>
+        <div class="bharath-pay-logo">
+            <img src="./images/upi-logo-removebg-preview.png" alt="">
+        </div>
+    </div>
+
+    <div class="show-total-end">
+        <div class="show-total-price">
+            <h1>Total:</h1>
+            <div>
+                <i class="fa-solid fa-indian-rupee-sign"></i>
+                <h3 class="Price"></h3>
+            </div>
+        </div>
+        <div class="upi-id-box">
+            <div>
+                <label for=""> UPI Id:</label>
+                <input type="text" placeholder="Enter">
+            </div>
+            <div>
+                <button onclick="payOpen()">Start payment</button>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+<div class="payment-final">
+    <h1>Pay</h1>
+    <span class="pay-from">From</span>
+    <div class="pay-bank">
+        <div>
+            <img src="./images/hdfc-bank-logo.png" alt="">
+           <h3>HDFC Bank-8574</h3>
+        </div>
+
+        <div class="pay-rupee">
+            <i class="fa-solid fa-indian-rupee-sign"></i>
+            <h3 class="Price-pay"></h3>
+        </div>
+
+    </div>
+    <div class="pay-password-div">
+        <div class="pay-password">
+            <label for="">Password:</label>
+            <input type="password" placeholder="Enter password">
+        </div>
+    
+        <div>
+            <button onclick="paySuccess()" class="pay-done">Pay</button>
+            <button class="pay-cancel"  onclick="payClose()">cancel</button>
+        </div>
+    </div>
+</div>
+
+<div class="payment-success">
+    <div>
+        <h1>Payment <span class="pay-ss-color">successful...</span></h1>
+    </div>
+    <div>
+        <!-- <span>....</span> -->
+        <!-- <i class="fa-solid fa-circle-check"></i> -->
+    </div>
+</div>
+
+<!-- confirmticket(display  after booking confirm) -->
+
+
+<div class="confrim-ticket-message">
+    <div class="confirm-top-name">
+        <div>
+           <h1>Hey <span class="confirm-name"></span></h1> 
+        </div>
+        <div>
+            <img src="./images/logo1-removebg-preview.png" alt="">
+        </div>
+    </div>
+
+    <div class="confirm-status">
+        <h1>your booking Confirmed</h1>
+    </div>
+
+    <div class="confirm-jouney-details">
+        <h2>your journey Details:-</h2>
+
+        <div class="confirm-from-to">
+            <div>
+                <p>From</p>
+                <h3 class="from-message"></h3>
+            </div>
+            <div>
+                <p>To</p>
+                <h3 class="to-message"></h3>
+            </div>
+        </div>
+        <div class="confirm-date-time">
+            <div>
+                <p>Date</p>
+                <h3 class="date-message"></h3>
+            </div>
+            <div>
+                <p>Time</p>
+                <h3 class="time-message"></h3>
+            </div>
+        </div>
+    </div>
+        <div class="confirm-flight-num">
+            <h3>Your Flight Number <span>HNT127</span></h3>
+           <p>Please arrive at the airport at least 2 hours before your flight.</p>
+        </div>
+        <div class="confirm-thank">
+            <div>
+                <h1>Thank you for Choosing Us!</h1>
+            </div>
+            <div class="confirm-air">
+                <img src="./images/airindia-logo-removebg-preview.png" alt="">
+            </div>
+
+        </div>
+    </div>
+
+    <div class="tell-download-ticket">
+       
+        <h3>for more details download flight ticket</h3>
+    
+        <button onclick="download()">Download</button>
+    </div>
+   
+
+<div class="download-succ-view">
+
+        <h3>Download successful</h3>
+        <button onclick="view()">View</button>
+    </div>
+   
+           
+        
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Brand new ticket HTML -->
+
+
+    <div class="ticket-adjust">
+
+        <div class="nav-flight">
+            <div> <i class="fa-solid fa-plane"></i></div>
+            <div><h1>BOARDING PASS</h1></div>
+            <div><h1>BOARDING PASS</h1></div>
+        </div>
+
+
+        <div class="powerticket">
+            <div class="left-ticket">
+        
+                <!-- <div class="nav-flight">
+                    <i class="fa-solid fa-plane"></i>
+                    <h1>BOARDING PASS</h1>
+                </div> -->
+        
+                <div class="ticket-content">
+                    <div class="content-main">
+        
+                        <div class="p-name">
+                            <p>Passenger Name</p>
+                            <h5 class="person-name"></h5>
+                        </div>
+        
+                        <div class="from-carrier">
+                            <div>
+                                <p>From</p>
+                                <h5 class="from-airp"></h5>
+                            </div>
+        
+                            <div>
+                                <p>Carrier</p>
+                                <h5>Air-India</h5>
+                            </div>
+                        </div>
+        
+                        <div class="to-date">
+                            <div>
+                                <p>To</p>
+                                <h5 class="to-airp"></h5>
+                            </div>
+                            <div>
+                                <p>Date</p>
+                                <h5 class="depature-time-date"></h5>
+                            </div>
+                            <div>
+                                <p>Time</p>
+                                <h5 class="depature-date-time">11:00</h5>
+                            </div>
+                        </div>
+        
+                        <div class="flight-details">
+                            <div>
+                                <p>Flight</p>
+                                <h5>HNT127</h5>
+                            </div>
+                            <div>
+                                <p>Seat</p>
+                                <h5>B12</h5>
+                            </div>
+                            <div>
+                                <p>Gate</p>
+                                <h5>G-20</h5>
+                            </div>
+                            <div>
+                                <p>Board Till</p>
+                                <h5>11:00</h5>
+                            </div>
+        
+                        </div>
+        
+        
+                    </div>
+                    
+                    <div class="barcode">
+                        <div>
+                            <img src="./images/flight-ticket-barcode-edited.jpg" alt="">
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="right-ticket">
+                        <!-- <div class="nav-flight-right">
+                            <h1>BOARDING PASS</h1>
+                        </div> -->
+                
+                        <div class="pad  p-name-right">
+                            <p>Passenger Name</p>
+                
+                            <h5 class="person-name-rt"></h5>
+                          
+                        </div>
+                
+                        <div class="pad from-right">
+                            <p>From</p>
+                            <h5 class="from-airp-rt"></h5>
+                           
+                        </div>
+                        
+                        <div class="pad to-right">
+                            <p>To</p>
+                            <h5 class="to-airp-rt"></h5>
+                           
+                        </div>
+                
+                        <div class="date-time-right">
+                            <div>
+                                <p>Date</p>
+                                <h5 class="depature-time-date-rt"></h5>
+                            </div>
+                            <div>
+                                <p>Time</p>
+                                <h5 class="depature-date-time-rt"></h5>
+                            </div>
+                            <div>
+                                <p>Gate</p>
+                                <h5>G-20</h5>
+                            </div>
+                        </div>
+                        <div class="flight-details-right">
+                            <div>
+                                <p>Flight</p>
+                                <h5>HNT127</h5>
+                            </div>
+                            <div>
+                                <p>Seat</p>
+                                <h5>B12</h5>
+                            </div>
+                            <div>
+                                <p>Board Till</p>
+                                <h5>11:00</h5>
+                            </div>
+                        </div>
+                
+                        
+                    
+                
+                    </div>
+                    
+                    
+                </div>
+        </div>
+        
+            
+        
+        </div>
+        <div class="below-bar-l">
+                <div class="bar-1"></div>
+                <div class="bar-2"></div>
+        </div>
+    </div>       
+
+
+
+
+
+
+            
+
+
+        
+<!-- old ticket table form HTML -->
+
+        <div class="ticket-display">
+
+            <h1>Flight Ticket</h1>
+            <table>
+                <tr>
+                    <th>Passenger Name</th>
+                    <!-- <td class="person-name"></td> -->
+                </tr>
+                <tr>
+                    <th>Flight Number</th>
+                    <td>ABC123</td>
+                </tr>
+                <tr>
+                    <th>Departure Date and Time</th>
+                    <td class="depature-time-date"></td>
+                </tr>
+                <tr>
+                    <th>Departure Airport</th>
+                    <td class="from-airp"></td>
+                </tr>
+                <tr>
+                    <th>Arrival Airport</th>
+                    <td class="to-airp"></td>
+                </tr>
+                <tr>
+                    <th>Seat Number</th>
+                    <td class="seat-number">12A</td>
+                </tr>
+                <tr>
+                    <th>Price</th>
+                    <!-- <td class="Price"></td> -->
+                </tr>
+        
+            </table>
+                 <p><strong>Note:Adhar cards for all people is mandatory</strong></p>
+            <p><strong>Note:</strong> Please arrive at the airport at least two hours before your scheduled departure time.</p>
+        </div>
+    
+    </body>
+    
+    </html>
+   
+    
+</html>
+<script>
+
+
+    // data for airport details and prices //
+
+
+   let bookprice=[
+    {from:"mumbai",
+    to:"delhi",
+    fromAirName:"Mumbai:Chhatrapati Shivaji Maharaj International Airport",
+    toAirPortName:"Delhi: Indira Gandhi International Airport ",
+    adultPrice:3000,
+    child:1500},
+   
+    {from:"delhi",
+    to:"mumbai",
+    fromAirName:"Delhi: Indira Gandhi International Airport ",
+    toAirPortName:"Mumbai:Chhatrapati Shivaji Maharaj International Airport",
+    adultPrice:3000,
+    child:1500},
+
+    {from:"Hyderabad",
+    to:"delhi",
+    fromAirName:"Hyderabad: Rajiv Gandhi International Airport",
+    toAirPortName:"Delhi: Indira Gandhi International Airport ",
+    adultPrice:7000,
+    child:4000},
+
+    {from:"Hyderabad",
+    to:"Bangalore",
+    fromAirName:"Hyderabad: Rajiv Gandhi International Airport",
+    toAirPortName:"Bangalore: Kempegowda International Airport ",
+    adultPrice:2500,
+    child:900}
+
+
+]
+
+let personName=document.querySelector(".person-name");
+let personNameRt=document.querySelector(".person-name-rt");
+let personNameMessage=document.querySelector(".confirm-name");
+
+let showTotalDisplay=document.querySelector(".show-total-pay-next")        
+let personNameShowTotal=document.querySelector(".show-total-pay-name")
+
+let depatureTime=document.querySelector(".depature-time-date");
+let depatureTimeRT=document.querySelector(".depature-time-date-rt");
+let dateMessage=document.querySelector(".date-message");
+
+let depatureDate=document.querySelector(".depature-date-time");
+let depatureDateRT=document.querySelector(".depature-date-time-rt");
+let timeMessage=document.querySelector(".time-message")
+
+let fromAir=document.querySelector(".from-airp");
+let fromAirRt=document.querySelector(".from-airp-rt")
+let fromMessage=document.querySelector(".from-message")
+
+let toAir=document.querySelector(".to-airp");
+let toAirRt=document.querySelector(".to-airp-rt");
+let toMessage=document.querySelector(".to-message");
+
+
+let price=document.querySelector(".Price");
+let pricePay=document.querySelector(".Price-pay");
+
+let ticketDisplay=document.querySelector(".ticket-display");
+
+let generateTicBtn=document.querySelector(".generate-btn")
+
+let personEnterName=document.querySelector("#person-name-enter");
+let dateDepatureEnter=document.querySelector("#date-depature");
+let timeDepatureEnter=document.querySelector("#time-depature");
+
+let bookls=localStorage.getItem("bookdata");
+let bookarr=[];
+if(bookls==null){
+    bookarr=[]
+}
+else{
+    bookarr=JSON.parse(bookls)
+}
+
+let recentData=[]
+ recentData.push(bookarr[bookarr.length-1]);
+
+console.log(recentData);
+// console.log(bookprice[0].from)
+console.log(recentData[recentData.length-1].from)
+if(bookprice[0].from==recentData[recentData.length-1].from){
+    console.log('hemanth')
+}
+
+let flightData=[];
+
+function checkdata(){
+ flightData=bookprice.filter(function(element,i){
+     console.log(element.from,element.to);
+     
+     if(element.from.toUpperCase().includes(recentData[recentData.length-1].from.toUpperCase()) && element.to.toUpperCase().includes(recentData[recentData.length-1].to.toUpperCase())){
+        console.log("got it")
+        //  flightData.push(element)
+         return element
+     }
+})
+   }
+
+   let display2=document.querySelector(".ticket-adjust");
+
+    
+console.log(flightData)
+
+let alertPrice=0;
+let attempCount=0;
+let ticketCount=0;
+
+let ticketCountText=document.querySelector(".ticket-count-text");
+let ticketCountShow=document.querySelector(".ticket-count-show")
+
+
+
+
+// generateTicBtn.addEventListener("click",function(){
+    // ticketDisplay.classList.toggle("active");
+    // display2.classList.toggle("active");
+    // showTotalDisplay.classList.toggle("active");
+
+    depatureTime.innerHTML=dateDepatureEnter.value
+    depatureTimeRT.innerHTML=dateDepatureEnter.value;
+    dateMessage.innerHTML=dateDepatureEnter.value;
+
+    depatureDate.innerHTML=timeDepatureEnter.value;
+    depatureDateRT.innerHTML=timeDepatureEnter.value;
+    timeMessage.innerHTML=timeDepatureEnter.value;
+
+    //  personName.innerHTML=personEnterName.value;
+    personName.innerHTML=personEnterName.value;
+    personNameRt.innerHTML=personEnterName.value;
+    personNameShowTotal.innerHTML=personEnterName.value+"...";
+    personNameMessage.innerHTML=personEnterName.value+"...";
+//    console.log(attempt)
+    checkdata()
+
+    console.log(flightData)
+    flightData[flightData.length-1]
+    fromAir.innerHTML=flightData[flightData.length-1].fromAirName;
+    fromAirRt.innerHTML=flightData[flightData.length-1].fromAirName;
+    fromMessage.innerHTML=flightData[flightData.length-1].from;
+
+
+    toAir.innerHTML=flightData[flightData.length-1].toAirPortName;
+    toAirRt.innerHTML=flightData[flightData.length-1].toAirPortName;
+    toMessage.innerHTML=flightData[flightData.length-1].to;
+
+
+    let adultPrice = +(recentData[recentData.length-1].adult) * (+(flightData[flightData.length-1].adultPrice));
+    let childprice = +(recentData[recentData.length-1].child) * (+(flightData[flightData.length-1].child));
+    attempCount= +(recentData[recentData.length-1].adult) + (+(recentData[recentData.length-1].child) );
+    console.log(attempCount);
+    console.log((adultPrice),childprice)
+    price.innerHTML= adultPrice + childprice+"/-";
+    pricePay.innerHTML= adultPrice + childprice+"/-";
+    alertPrice=adultPrice + childprice
+// })
+
+
+function payOpen(){
+    document.querySelector(".payment-final").style.display = "block";
+}
+
+function payClose(){
+    document.querySelector(".payment-final").style.display = "none";
+}
+function paySuccess(){
+    // alert("Rs:"+alertPrice+"/-"+"debited from your HDFC Bank account.")
+    if(ticketCount==0){ 
+    document.querySelector(".payment-success").style.display = "block";
+    document.querySelector(".payment-success").style.display = "flex";
+    document.querySelector(".confrim-ticket-message").style.display = "block";
+    document.querySelector(".tell-download-ticket").style.display = "block";
+    document.querySelector(".tell-download-ticket").style.display = "flex";
+    ticketCount++;
+    ticketCountText.innerHTML=("ticket"+" "+ticketCount+" "+ "successfuly generated")
+    ticketCountShow.style.display="block";
+    }
+}
+
+function download(){
+    document.querySelector(".download-succ-view").style.display = "block";
+    document.querySelector(".download-succ-view").style.display = "flex";
+
+}
+let nextProcess=document.querySelector(".nextprocess");
+nextProcess.addEventListener("click",function(){
+    // showTotalDisplay.classList.toggle("active");
+    if(ticketCount!=attempCount){ 
+    showTotalDisplay.style.display="block"
+    depatureTime.innerHTML=dateDepatureEnter.value
+    depatureTimeRT.innerHTML=dateDepatureEnter.value;
+    dateMessage.innerHTML=dateDepatureEnter.value;
+
+    depatureDate.innerHTML=timeDepatureEnter.value;
+    depatureDateRT.innerHTML=timeDepatureEnter.value;
+    timeMessage.innerHTML=timeDepatureEnter.value;
+
+    //  personName.innerHTML=personEnterName.value;
+    personName.innerHTML=personEnterName.value;
+    personNameRt.innerHTML=personEnterName.value;
+    personNameShowTotal.innerHTML=personEnterName.value+"...";
+    personNameMessage.innerHTML=personEnterName.value+"...";
+    if(ticketCount>=1){
+        ticketCount++;
+        ticketCountText.innerHTML="ticket"+" "+ticketCount+" "+ "successfuly generated"
+        console.log(ticketCount);
+    }
+    if(ticketCount==attempCount){
+        // alert("succesfully all tickets generated for"+attempCount+"members")
+        // ticketCountText.innerHTML="succesfully all tickets generated for"+attempCount+"members";
+        ticketCountText.innerHTML="ticket"+" "+ticketCount+" "+ "successfuly generated"
+    }
+
+}
+    else{
+        // alert("you booked ticket for all the members mentioned")
+        ticketCountText.innerHTML="already booked ticket for mentioned";
+    }
+
+})
+
+function view(){
+    // display2.classList.toggle("active");
+    display2.style.display="block"
+}
+</script>

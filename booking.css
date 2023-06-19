@@ -1,0 +1,912 @@
+*{
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
+}
+
+
+a{
+  text-decoration: none;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: auto;
+   background: linear-gradient(to right,rgb(15, 192, 232) , white);
+}
+
+.navbaratag{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.logo{
+  width: 17%;
+  margin-left: 3%;
+}
+
+.logo img{
+  width: 80%;
+  height: 50px;
+}
+
+
+
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: #f2f2f2;
+}
+h1 {
+    font-size: 24px;
+    margin-top: 0;
+}
+.ticket-display{
+    display: none;
+  }
+  .ticket-display.active{
+    display: none;
+  }
+
+.travel-quote{
+  width: 40%;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-left: 45%;
+  margin-top: 30px;
+  font-family: 'Times New Roman', Times, serif;
+}
+.travel-quote h1:nth-child(2){
+  margin-left: 35%;
+}
+
+.travel-quote:hover{
+  cursor: pointer;
+  transition: 0.3s;
+  transform: scale(1.1);
+}
+
+
+.ticket-count-show{
+  width: 35%;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-left: 55%;
+  margin-top: 30px;
+  /* height: 50px; */
+  margin-bottom:-20px;
+  display: none;
+}
+
+
+
+
+
+/* spons, detailform flex */
+
+.spon-detail{
+  width: 80%;
+  display: flex;
+  margin: auto;
+  justify-content: space-around;
+}
+
+.sponsers{
+  width: 35%;
+margin: auto;
+
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+}
+
+.air-india-spon{
+  width: 90%;
+  margin-left: 21%;
+}
+.air-india-spon>p{
+  color: rgb(163, 159, 159);
+  margin-left: -13%;
+}
+
+.sponsers:hover{
+  cursor: pointer;
+  transition: 0.3s;
+  transform: scale(1.1);
+}
+
+
+
+.air-india-spon>img{
+  width: 50%;
+}
+.taj-holidays{
+  width: 90%;
+  margin-left: 22%;
+  margin-top: 8px;
+}
+.taj-holidays>img{
+  width: 45%;
+}
+
+
+
+.logo-detail{
+  width: 50%;
+}
+.logo-detail>img{
+  width: 50%;
+}
+
+  /* details form000000000 */
+  .detail-form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 15px;
+    margin-top: 22px;
+  }
+  .detail-form *{
+    padding: 3px;
+    margin-bottom: 5px;
+  }
+
+  /* .detail-form:hover{
+    cursor: pointer;
+    transition: 0.3s;
+    transform: scale(1.1);
+   
+ } */
+
+
+  .detail-form div{
+    width:80%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 8px;
+  }
+ .detail-form input{
+  border: none;
+  border-bottom: 1px solid black;
+ }
+.detail-form select{
+  border: none;
+  border-bottom: 1px solid black;
+
+}
+.detail-form>div:nth-child(1){
+  margin-bottom: 10px;
+
+}
+  .detail-form button{
+    width: 35%;
+    margin: auto;
+    margin-bottom: 15px;
+    background-color:rgb(15, 192, 232);
+    color: white;
+    border: none;
+    height: 40px;
+    border-radius: 8px;
+  }
+
+
+/* total Amount-show- */
+
+.show-total-pay-next{
+  width: 30%;
+ 
+  margin-left: 55.5%;
+  margin-top: -20px;
+  margin-bottom: 50px;
+  padding-left: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 15px;
+  display: none;
+}
+
+.show-total-pay-next:hover{
+  cursor: pointer;
+  transition: 0.3s;
+  transform: scale(1.1);
+}
+
+
+
+/* .show-total-pay-next.active{
+  display: block;
+} */
+
+.show-total-top{
+  width: 100%;
+  display: flex;
+  /* justify-content: center; */
+ align-items: center;
+}
+.show-total-top>div{
+  width: 80%;
+  display: flex;
+  margin-top: 8px;
+}
+.show-total-top h1{
+  font-size: 35px;
+  /* margin-left: 36%; */
+}
+.show-total-top h3{
+margin-top: 11px;
+font-size: 25px;
+margin-left: 20px;
+}
+
+.show-total-mid{
+  width: 80%;
+  display: flex;
+ /* margin-left: 20%; */
+ margin-top: 8px;
+  
+}
+.show-total-mid>div{
+  width: 40%;
+}
+.show-pay-via{
+  display:flex;
+}
+.show-pay-via p{
+  margin-top: 10px;
+  margin-left: 15px;
+}
+.bharath-pay-logo>img{
+  width: 60%;
+}
+
+
+.show-total-end{
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 25px;
+
+/* margin-left: 30px; */
+  padding-bottom: 10px;
+  
+}
+/* .show-total-end>div{
+  width: 50%;
+  border: 1px dotted black;
+} */
+.show-total-price div{
+display: flex;
+}
+.fa-indian-rupee-sign{
+  margin-top: 5px;
+  margin-left: 10px;
+}
+.show-total-price{
+  width: 30%;
+}
+.show-total-price  h1{
+  font-size: 35px;
+}
+.show-total-price div h3{
+  margin-left: 10px;
+
+}
+
+.upi-id-box{
+ padding: 10px;
+ padding-left: 15px;
+  padding-top: 10px;
+  width: 60%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 5px;
+  margin-left: 10%;
+}
+.upi-id-box *{
+  margin-bottom: 5px;
+}
+.upi-id-box button{
+  width: 55%;
+    margin: auto;
+    margin-bottom: 5px;
+    background-color:rgb(15, 192, 232);
+    color: white;
+    border: none;
+   
+    border-radius: 3px;
+}
+.upi-id-box input{
+ width: 100%;
+}
+.upi-id-box label{
+  width: 100%;
+}
+
+/*/////////////////payement-final ///////////// */
+
+.payment-final{
+  width: 29%;
+ 
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  margin-top: -40px;
+  margin-bottom: 30px;
+  display: none;
+  margin-left: 15%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 8px;
+}
+.payment-final:hover{
+  cursor: pointer;
+  transition: 0.3s;
+  transform: scale(1.1);
+}
+.payment-final>h1{
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+.payment-final *{
+  margin-bottom: 5px;
+}
+.pay-from{
+  color: rgb(78, 73, 73);
+  font-size: 12px;
+}
+.pay-bank{
+  display: flex;
+  width: 90%;
+}
+.pay-bank>div:nth-child(1){
+  display: flex;
+  width: 60%;
+}
+.pay-bank>div:nth-child(1)>img{
+  width: 9%;
+  height: 20px;
+}
+.pay-bank>div:nth-child(1)>h3{
+margin-left: 3px;
+}
+
+
+.pay-rupee{
+  display: flex;
+  margin-left: -10px;
+  margin-left: 10%;
+}
+.pay-rupee>h3{
+  margin-left: 10px;
+}
+
+.pay-done{
+  width: 15%;
+    margin: auto;
+    margin-bottom: 5px;
+    background-color:rgb(15, 192, 232);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    height: 20px;
+}
+.pay-cancel{
+  width: 15%;
+  margin: auto;
+  margin-bottom: 5px;
+  background-color:rgb(237, 50, 50);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  margin-left: 5px;
+  height: 20px;
+}
+.pay-password{
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.pay-password input{
+  border: none;
+  border-bottom: 1px solid black;
+  margin-top: -5px;
+ }
+.pay-password-div{
+  height: 80px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 8px;
+  padding-left:5px;
+  padding-right: 10px;
+}
+
+
+/* /////////----payment-successful----//////*/
+.payment-success{
+  width: 29%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  display: none;
+  margin-left: 15%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 8px;
+ 
+}
+.payment-success>div:nth-child(1){
+  width: 70%;
+  padding-left: 20px;
+}
+.payment-success>div:nth-child(2){
+  width: 30%; 
+}
+.payment-success:hover{
+  cursor: pointer;
+  transition: 0.3s;
+  transform: scale(1.1);
+}
+.pay-ss-color{
+  color: rgb(15, 192, 232);
+  /* color: black; */
+}
+.fa-circle-check{
+ color: rgb(34, 34, 153);
+ color: rgb(31, 108, 31);
+ color: black;
+  margin-left: 70%;
+  margin-top: 5.5px;
+  font-size: 20px;
+
+}
+
+/* ////////--confirm-ticket--\\\\\\\\*/
+.confrim-ticket-message{
+  width: 55%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 10%;
+  padding: 20px;
+  padding-left: 45px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 20px;
+  display: none;
+}
+.confrim-ticket-message:hover{
+  cursor: pointer;
+  transition: 0.3s;
+  transform: scale(1.1);
+}
+
+
+/* .confrim-ticket-message>div{
+  margin-top: 10px;
+} */
+.confirm-top-name{
+  width:100%;
+  display: flex;
+ justify-content: space-between;
+ margin-bottom: 35px;
+}
+.confirm-top-name h1{
+  font-size: 55px;
+}
+.confirm-name{
+  font-size: 45px;
+  color:rgb(15, 192, 232) ;
+  margin-left: 20px;
+}
+.confirm-top-name>div:nth-child(1){
+width: 70%;
+margin-top: 10px;
+}
+/* .confirm-top-name>div:nth-child(1){
+  width: 30%;
+
+} */
+
+
+.confirm-top-name>div:nth-child(2)>img{
+  width: 60%;
+ margin-left: 40%;
+ margin-top: 30px;
+}
+
+.confirm-jouney-details{
+  margin-top: 15px;
+}
+.confirm-from-to{
+  width: 70%;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 8px;
+  padding-left: 10px;
+  height: 60px;
+}
+.confirm-from-to>div{
+  width: 64%;
+}
+.confirm-date-time{
+  width: 70%;
+  display: flex;
+  margin-top: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 8px;
+  padding-left: 10px;
+  align-items: center;
+  height: 60px;
+}
+.confirm-date-time>div{
+  width: 64%;
+}
+
+.confirm-flight-num{
+  margin-top: 20px;
+}
+
+.confirm-thank{
+  width:100%;
+  display: flex;
+ justify-content: space-between;
+ margin-top: 40px;
+}
+
+.confirm-thank>div:nth-child(1){
+width: 80%;
+margin-top: 10px;
+}
+.confirm-thank>div:nth-child(2){
+  width: 30%;
+
+}
+.confirm-thank>div:nth-child(2)>img{
+  width: 100%;
+ margin-left: 5%;
+margin-top: -55px;
+margin-right: -10px;
+}
+
+/* ---------tell-download----- */
+
+.tell-download-ticket{
+  width: 30%;
+  display: flex;
+  margin-left: 10%;
+  margin-top: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 8px;
+  height: 50px;
+  align-items: center;
+  padding-left: 10px;
+  display: none;
+}
+.tell-download-ticket:hover{
+  cursor: pointer;
+  transition: 0.3s;
+  transform: scale(1.1);
+}
+
+.tell-download-ticket>button{
+  margin-left: 15px;
+  width: 15%;
+    margin: auto;
+    background-color:rgb(15, 192, 232);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    height: 20px;
+}
+    
+.download-succ-view{
+  width: 30%;
+  display: flex;
+  margin-left: 10%;
+  margin-top: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 8px;
+  height: 50px;
+  align-items: center;
+  padding-left: 10px;
+  display: none;
+}
+.download-succ-view:hover{
+  cursor: pointer;
+  transition: 0.3s;
+  transform: scale(1.1);
+}
+.download-succ-view>button{
+  margin-left: 15px;
+  width: 15%;
+    margin: auto;
+    background-color:rgb(15, 192, 232);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    height: 20px;
+}
+    
+
+
+
+
+
+
+
+
+  /* ticket new cssss */
+
+
+  .powerticket{
+    
+    width: 100%;
+    display: flex;
+    margin: auto;
+    
+  }
+.powerticket p{
+  color: rgb(71, 68, 68);
+}
+  .ticket-adjust{
+    width: 70%;
+    border-radius: 20px;
+    height: 360px;
+      margin: auto;
+      border: 1px solid black;
+     display: none;
+     margin-top: 50px;
+  }
+/* .ticket-adjust.active{
+display: block;
+
+} */
+
+
+  .left-ticket{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    height: 280px;
+  }
+  .below-bar-l{
+    width: 100%;
+    height: 30px;
+    background-color: rgb(137, 35, 35);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+  }
+  .bar-1{
+    width: 75%;
+  }
+  .bar-2{
+    width: 25%;
+    border-left:2px dotted black ;
+    height: 30px;
+  }
+  /* .below-bar-r{
+    width: 100%;
+    height: 25px;
+    background-color: blue;
+    border-bottom-right-radius: 20px;
+  } */
+
+  .ticket-content{
+    display: flex;
+    border: 1px dotted green;
+    width: 100%;
+  }
+
+.nav-flight{
+
+  width: 100%;
+  display: flex;
+  align-items: center;
+ 
+  background-color: rgb(137, 35, 35);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 50px;
+}
+.nav-flight div:nth-child(1){
+ width: 50%;
+}
+.nav-flight h1{
+  font-size: 22px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.nav-flight div:nth-child(2){
+ width: 25%;
+ color: white;
+}
+.nav-flight div:nth-child(3){
+ width: 25%;
+ border : 50px;
+ border-left: 2px dotted black;
+}
+.nav-flight div:nth-child(3)>h1{
+ color: white;
+ margin-left: 10px;
+ }
+
+
+.fa-plane{
+  color: white;
+  font-size: 35px;
+  margin: 5px;
+  margin-left: 50px;
+}
+
+  .content-main{
+    width: 60%;
+    height: 280px;
+    padding-left: 30px;
+   
+  }
+  
+  .content-main>div{
+    margin-top: 25px;
+  }
+  .from-carrier{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .to-date{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .flight-details{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+  }
+.barcode{
+  width: 15%;
+  margin: auto;
+}
+
+.barcode img{
+  width: 65.4%;
+  margin-left: 25px;
+  margin-top: 8px;
+}
+
+  .right-ticket{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+  border-left: 2px dotted black;
+   position: relative;
+    padding-bottom: 0%;
+   
+  }
+
+ 
+.nav-flight-right{
+  background-color: rgb(87, 87, 236);
+  border-top-right-radius: 20px;
+}
+.pad{
+  width: 90%;
+margin-top: 10px;
+padding-left: 8px;
+}
+  .date-time-right{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-top: 8px;
+  }
+  .flight-details-right{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-top: 8px;
+  }
+
+
+
+  /* @media screen and (max-width: 1100px) { */
+    @media screen and (min-width: 700px) and (max-width: 1100px){
+   .navbar{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+   }
+   .navbaratag{
+    width: 90%;
+ }
+    .travel-quote{
+    margin: auto;
+    width: 70%;
+    margin-top: 15px;
+    } 
+
+    .spon-detail{
+      display: flex;
+      flex-direction: column-reverse;
+      margin: auto;
+      margin-top: 15px;
+      align-items: center;
+      width: 95%;
+    }
+
+    .sponsers{
+      width: 70%;
+    }
+    .detail-form{
+      width: 90%;
+    }
+
+    .show-total-pay-next{
+      width: 80%;
+      margin: auto;
+      margin-top: 25px;
+    }
+    .payment-final{
+      width: 80%;
+      margin: auto;
+      margin-top: 35px;
+    }
+    .payment-success{
+      width: 80%;
+      margin: auto;
+      margin-top: 25px;
+    }
+    .confrim-ticket-message{
+      width: 90%;
+      margin: auto;
+      margin-top: 25px;
+    }
+    .tell-download-ticket{
+      width: 80%;
+      margin: auto;
+      margin-top: 25px;
+      
+    }
+    .download-succ-view{
+      width: 80%;
+      margin: auto;
+      margin-top: 25px;
+    }
+    .ticket-adjust{
+      width: 100%;
+      margin: auto;
+      margin-top: 25px;
+    }
+
+  }
+
+  
