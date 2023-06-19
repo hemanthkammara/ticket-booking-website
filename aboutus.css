@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+}
+  
+  a{
+    text-decoration: none;
+  }
+  
+  .navbar{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+     background: linear-gradient(to right,rgb(15, 192, 232) , white);
+  }
+  
+  .navbaratag{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  .logo{
+    width: 17%;
+    margin-left: 3%;
+  }
+  
+  .logo img{
+    width: 80%;
+    height: 50px;
+  }
+  
