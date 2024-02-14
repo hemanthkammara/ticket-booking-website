@@ -10,7 +10,9 @@ a travel website that combines stunning destination showcases with a seamless fl
 <img src="https://github.com/audacity07/screeching-wax-837/blob/master/images/1200px-Javascript-shield.svg.png?raw=true" alt="js" width="45" height="55"/>
 </p>
 <hr>
+<img src="https://github.com/hemanthkammara/ticket-booking-website/assets/130533373/cdbc962c-e14c-4dd4-83c0-3f420d8358fd"/>
+<img src="https://github.com/hemanthkammara/ticket-booking-website/assets/130533373/5b53e916-8d8e-46e3-b574-572b477e7066"/>
 
 netlifyLink:https://adorable-gaufre-5079aa.netlify.app/
-tech stacks:-HTML,CSS,Java Script,no external CSS
+
 all pages are responsive
